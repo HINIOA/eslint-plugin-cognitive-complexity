@@ -1,0 +1,41 @@
+{
+  "name": "eslint-plugin-cognitive-complexity",
+  "version": "1.4.0",
+  "description": "Reduce code complexity by capping the amount of cognitive complexity allowed in a program.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "xinyao.qiu",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha tests --recursive",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "escape-string-regexp": "^4.0.0",
+    "espree": "^7.3.1",
+    "esutils": "^2.0.3",
+    "requireindex": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-plugin-eslint-plugin": "^3.2.0",
+    "eslint-plugin-node": "^11.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "mocha": "^9.0.0"
+  },
+  "engines": {
+    "node": "12.x || 14.x || >= 16"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
+  "license": "ISC",
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
